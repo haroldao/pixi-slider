@@ -142,7 +142,7 @@
     },
     animateSlide: function() {
       this.slides.map((slide, i) => {
-        TweenMax.to(slide, 1.5, { x: (i - this.currentSlide) * this.options.width, ease: 'Power2.easeInOut' });
+        TweenMax.to(slide, this.options.speed, { x: (i - this.currentSlide) * this.options.width, ease: 'Power2.easeInOut' });
       });
     },
     onShockWave: function(x, y) {
@@ -169,7 +169,7 @@
     width: 900,
     height: 540,
     autoplaySpeed: 5000,
-    speed: 0.5,
+    speed: 1.5,
     slides: [
       'img-01.jpg',
       'img-02.jpg',
